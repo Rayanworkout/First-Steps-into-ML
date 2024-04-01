@@ -16,6 +16,32 @@ def generate_clusters(
     max_clusters: int = 7,
     show_elbow: bool = False,
 ) -> None:
+    """
+    This function is used to easily generate clusters for a given dataset and the fields to be used for clustering.
+
+    This way, you can observe the clusters formed by the KMeans algorithm between figure1 and figure2.
+    You can  also show the elbow chart to determine the optimal number of clusters (you need to properly import the show_elbow_chart function).
+
+    Parameters
+    ----------
+    df : pd.DataFrame
+        The dataset to be used for clustering. The data need to be cleaned and preprocessed before passing it to this function.
+
+    figure1 : str
+        The first field to be used for clustering. This field should be present in the dataset.
+
+    figure2 : str
+        The second field to be used for clustering. This field should be present in the dataset.
+
+    max_clusters : int
+        The maximum number of clusters to be formed. The default value is 7.
+
+    show_elbow : bool
+        A flag to show the elbow chart or not. The default value is False. You can show it to decide the optimal number of clusters and then run the
+        function again with the optimal number of clusters.
+
+
+    """
 
     X_train, X_test, y_train, y_test = train_test_split(
         df[[figure1, figure2]],

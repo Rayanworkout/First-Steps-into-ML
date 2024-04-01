@@ -11,11 +11,12 @@ def show_elbow_chart(X_train: np.ndarray, max_clusters: int) -> None:
     Parameters
     ----------
     max_clusters : int
-        The maximum number of clusters to iterate through.
+        The maximum number of clusters to iterate through. Feel free to change this value to see the elbow chart for a different range of clusters.
 
     X_train : np.ndarray
-        The training data.
+        The training data. These are the features on which the model will be trained.
 
+    https://en.wikipedia.org/wiki/Elbow_method_(clustering)
     """
     fits = []
     scores = []
