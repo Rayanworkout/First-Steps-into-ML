@@ -6,7 +6,7 @@ from sklearn.cluster import KMeans
 from sklearn.model_selection import train_test_split
 from sklearn import preprocessing
 
-from elbow_method import show_elbow_chart
+from kmeans_clustering.standalone_functions.elbow_method import show_elbow_chart
 
 
 def generate_clusters(
